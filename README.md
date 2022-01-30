@@ -23,7 +23,6 @@ $subject = $_POST['subject'];
 $body = $_POST['body'];
 ```
 
-![phpsendemail](https://user-images.githubusercontent.com/96692767/151716292-4a66fc73-0770-4d62-b9fa-35ed547f7020.jpg)
-
+![phpemail](https://user-images.githubusercontent.com/96692767/151716362-eaffd81c-82e3-49c9-ab74-b057ae92ef21.jpg)
 
 Set up **SMTP and EMAIL settings.**
