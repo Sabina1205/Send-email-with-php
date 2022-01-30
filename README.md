@@ -1,10 +1,19 @@
 # Send-email-with-php
 Contact form for sending emails via **PHP code with open-source PHP library.**
 
-Connect PHPMailer in PHP code.
+Connect PHPMailer with PHP code.
 ```php
  use PHPMailer\PHPMailer\PHPMailer; 
 ```
+
+```php 
+ require_once "PHPMailer/PHPMailer.php";
+ require_once "PHPMailer/SMTP.php";
+ require_once "PHPMailer/Exception.php";
+
+ $mail = new PHPMailer();
+ ```
+
 
 Include id attributes from contact form.
 ```php 
@@ -14,4 +23,4 @@ $subject = $_POST['subject'];
 $body = $_POST['body'];
 ```
 
-Set up **SMTP and EMAIL settings.
+Set up **SMTP and EMAIL settings.**
