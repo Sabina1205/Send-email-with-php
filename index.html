@@ -12,60 +12,56 @@
 <!-- Main div class for contact section -->
 <div class="contact-section">
 <!-- Form -->
-  <div class="contact-form">
-                <input id="name" placeholder="Name" class="form-control">
-                <input id="email" placeholder="Email" class="form-control">
-                <input id="subject" placeholder="Subject" class="form-control">
-                <textarea class="form-control" id="body" placeholder="Massage"></textarea>
-                <input type="button" onclick="sendEmail()" value="Send An Email" class="btn">
-  </div>
+    <div class="contact-form">
+        <input id="name" placeholder="Name" class="form-control">
+        <input id="email" placeholder="Email" class="form-control">
+        <input id="subject" placeholder="Subject" class="form-control">
+        <textarea class="form-control" id="body" placeholder="Massage"></textarea>
+        <input type="button" onclick="sendEmail()" value="Send An Email" class="btn">
+    </div>
 </div>
 
+<!-- JAVASCRIPT code with PHP file 'sendEmail', from contact section id attributes are included -->
 
-    <!-- JAVASCRIPT code with PHP file 'sendEmail', from contact section id attributes are included -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    function sendEmail() {
+        var name = $("#name");
+        var email = $("#email");
+        var subject = $("#subject");
+        var body = $("#body");
 
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        function sendEmail() {
-            var name = $("#name");
-            var email = $("#email");
-            var subject = $("#subject");
-            var body = $("#body");
-
-            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
-                $.ajax({
-                   url: 'sendEmail.php',
-                   method: 'POST',
-                   dataType: 'json',
-                   data: {
-                       name: name.val(),
-                       email: email.val(),
-                       subject: subject.val(),
-                       body: body.val()
-                   }, success: function (response) {
-                      if (response.status == "success")
-                            alert('Email Has Been Sent!');
-                        else {
-                            alert('Please Try Again!');
-                            console.log(response);
-                        }
-                   }
-                });
-            }
+        if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+            $.ajax({
+               url: 'sendEmail.php',
+               method: 'POST',
+               dataType: 'json',
+               data: {
+                   name: name.val(),
+                   email: email.val(),
+                   subject: subject.val(),
+                   body: body.val()
+               }, success: function (response) {
+                  if (response.status == "success")
+                        alert('Email Has Been Sent!');
+                    else {
+                        alert('Please Try Again!');
+                        console.log(response);
+                    }
+               }
+            });
         }
+    }
 
-        function isNotEmpty(caller) {
-            if (caller.val() == "") {
-                caller.css('border', '1px solid red');
-                return false;
-            } else
-                caller.css('border', '');
-
+    function isNotEmpty(caller) {
+        if (caller.val() == "") {
+            caller.css('border', '1px solid red');
+            return false;
+        } else {
+            caller.css('border', '');
             return true;
         }
-    </script>
-
- </body>
+    }
+</script>
+</body>
 </html>
-
-
