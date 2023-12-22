@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .contact-section {
@@ -20,9 +21,8 @@
   display: inline-block;
   width: 100%;
   margin: 16px 0;
-  border: none;
-  border-bottom: 2px solid #FFC300;
-  border-radius: 30px;
+  border: 2px solid #68736b;
+  border-radius: 10px;
   background: none; 
   padding: 20px 30px;
   outline: none;
@@ -42,14 +42,14 @@ textarea.form-control {
 .btn {
   float: center;
   border: 0;
-  background: #FFC300; 
-  color: #DAF7A6;
+  background: #68736b; 
+  color: #fff7ec;
   padding: 12px 50px;
-  border-radius: 20px;
+  border-radius: 10px;
   cursor: pointer;
   transition: 0.5s;
 }
 
 .btn:hover{
-  background: #e3e64d;
+  background: #b8b89d;
 }
