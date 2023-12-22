@@ -6,6 +6,7 @@ Connect PHPMailer with PHP code.
  use PHPMailer\PHPMailer\PHPMailer; 
 ```
 
+
 ```php 
  require_once "PHPMailer/PHPMailer.php";
  require_once "PHPMailer/SMTP.php";
@@ -22,7 +23,6 @@ $email = $_POST['email'];
 $subject = $_POST['subject'];
 $body = $_POST['body'];
 ```
-
-![phpemail](https://user-images.githubusercontent.com/96692767/151716362-eaffd81c-82e3-49c9-ab74-b057ae92ef21.jpg)
+![form-php](https://github.com/Sabina1205/Send-email-with-php/assets/96692767/6ed9d8c2-d749-4b6a-8dad-f51d22f0c372)
 
 Set up **SMTP and EMAIL settings.**
